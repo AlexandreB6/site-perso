@@ -5,7 +5,7 @@ const recettes = [
   {
     href: "/",
     titre: "Poulet au Curry",
-    image: "https://www.example.com/images/poulet-curry.jpg",
+    image: "/pommes.jpg",
     ingredients: [
       "Poulet",
       "Curry en poudre",
@@ -20,7 +20,7 @@ const recettes = [
   {
     href: "/",
     titre: "Lasagnes à la Bolognese",
-    image: "https://www.example.com/images/lasagnes-bolognese.jpg",
+    image: "/pommes.jpg",
     ingredients: [
       "Pâtes à lasagnes",
       "Viande hachée",
@@ -35,7 +35,7 @@ const recettes = [
   {
     href: "/",
     titre: "Ratatouille",
-    image: "https://www.example.com/images/ratatouille.jpg",
+    image: "/pommes.jpg",
     ingredients: [
       "Aubergines",
       "Courgettes",
@@ -50,7 +50,7 @@ const recettes = [
   {
     href: "/",
     titre: "Soufflé au Fromage",
-    image: "https://www.example.com/images/souffle-fromage.jpg",
+    image: "/pommes.jpg",
     ingredients: [
       "Fromage râpé",
       "Beurre",
