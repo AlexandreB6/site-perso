@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const recettes = [
   {
@@ -62,6 +63,8 @@ const recettes = [
   },
 ];
 
+console.log(recettes);
+
 export default function Page() {
   return (
     <div>
@@ -74,7 +77,12 @@ export default function Page() {
             className="p-2 rounded-lg bg-orange-800 hover:animate-scale-up text-white"
           >
             <h2>{recette.titre}</h2>
-            <img src={recette.image} alt={recette.titre} />
+            <Image
+              src={recette.image}
+              width={50}
+              height={50}
+              alt={recette.titre}
+            />
             <span>Niveau de difficulté: {recette.niveauDeDifficulte}</span>
             <ul>
               {recette.ingredients.map((ingredient, idx) => (

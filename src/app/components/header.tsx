@@ -3,11 +3,13 @@ import Image from "next/image";
 
 const links = [
   {
+    key: "1",
     name: "Galeries images",
     href: "/galeries",
     icon: "icone galery",
   },
   {
+    key: "2",
     name: "recettes",
     href: "/recettes",
     icon: "icon recettes",
@@ -34,7 +36,7 @@ export default function Header() {
           {links.map((link) => {
             return (
               <li>
-                <Link key={link.name} href={link.href}>
+                <Link key={link.key} href={link.href}>
                   {link.name}
                 </Link>
               </li>
