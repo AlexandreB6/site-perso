@@ -35,10 +35,8 @@ export default function Header() {
         <ul className="text-white flex flex-row content-center gap-4">
           {links.map((link) => {
             return (
-              <li>
-                <Link key={link.key} href={link.href}>
-                  {link.name}
-                </Link>
+              <li key={link.key}>
+                <Link href={link.href}>{link.name}</Link>
               </li>
             );
           })}
