@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import Search from "@/app/components/search";
 
 const recettes = [
   {
-    href: "/",
+    href: "/recettes/recette",
     titre: "Poulet au Curry",
     image: "/pommes.jpg",
     ingredients: [
@@ -63,14 +64,23 @@ const recettes = [
   },
 ];
 
-console.log(recettes);
+console.log("test");
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+  };
+}) {
+  const query = searchParams?.query || "";
+
   return (
     <div>
       <h1>Liste de recette</h1>
+      <Search placeholder="Recherche une recette" />
       <div className="flex justify-center gap-8 wrap">
-        {recettes.map((recette, index) => (
+        {recettes.map((recette, index, query) => (
           <Link
             href={recette.href}
             key={index}
